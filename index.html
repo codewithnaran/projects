@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.RVix6boCCPv3glrGyX3V2gHaFj?w=283&h=212&c=7&r=0&o=5&dpr=1.5&pid=1.7" />
+    <title>Mystery</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background-color: #000;
+            color: #0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(0, 15, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        #clue {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            min-height: 3em;
+        }
+
+        #audio-player {
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        .btn {
+            background-color: #0f0;
+            color: #000;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0c0;
+            transform: scale(1.05);
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #0f0, 0 0 10px #0f0;
+            }
+            to {
+                text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+            }
+        }
+
+        #matrix {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            #clue {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <div class="container">
+        <h1>ictkalika.tech</h1>
+        <p id="clue"></p>
+        <audio id="audio-player" controls>
+            <source src="halkaramailo.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button class="btn" id="reveal-btn">balle balle</button>
+    </div>
+
+    <script>
+        // Matrix rain animation
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const katakana = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        const alphabet = katakana + latin + nums;
+
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        const rainDrops = [];
+
+        for (let x = 0; x < columns; x++) {
+            rainDrops[x] = 1;
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0f0';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 30);
+
+        // Typewriter effect for clue
+        const clueElement = document.getElementById('clue');
+        const clueText = "Ram Ram bhai log! Kaise ho? Aaj ka clue hai - 'balle balle'.";
+        let clueIndex = 0;
+
+        function typeClue() {
+            if (clueIndex < clueText.length) {
+                clueElement.innerHTML += clueText.charAt(clueIndex);
+                clueIndex++;
+                setTimeout(typeClue, 50);
+            }
+        }
+
+        document.getElementById('reveal-btn').addEventListener('click', () => {
+            clueElement.innerHTML = '';
+            clueIndex = 0;
+            typeClue();
+        });
+
+        // Responsive canvas resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            rainDrops.length = Math.ceil(canvas.width / fontSize);
+            for (let x = 0; x < rainDrops.length; x++) {
+                rainDrops[x] = 1;
+            }
+        });
+    </script>
+</body>
+</html>
