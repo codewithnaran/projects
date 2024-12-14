@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Appointment Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Hospital Name</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#founder">Founder</a></li>
+                <li><a href="#booking">Book Appointment</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1 class="fade-in">Welcome to Our Hospital</h1>
+            <p class="fade-in">Book your appointment with ease</p>
+        </section>
+        
+        <section id="about" class="from-left">
+            <h2>About Us</h2>
+            <p>We provide top-quality healthcare services...</p>
+        </section>
+        
+        <section id="founder" class="from-right">
+            <h2>Our Founder</h2>
+            <img src="founder.jpg" alt="Founder's photo">
+            <p>Dr. Jane Doe, with 20 years of experience...</p>
+        </section>
+        
+        <!-- Add similar classes to other sections as needed -->
+
+        <section id="booking">
+            <h2>Book an Appointment</h2>
+            <form id="appointment-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone" required>
+                <input type="date" required>
+                <select required>
+                    <option value="">Select Department</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="neurology">Neurology</option>
+                    <!-- Add more options -->
+                </select>
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@hospital.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Health St, Medical City</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Hospital Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

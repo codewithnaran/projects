@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Images/profile-pic(4).png">
+    <title>Narayan Bhusal - Graphics Designer & Frontend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="Images/profile-pic(4).png" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#connect">Connect</a></li>
+            </ul>
+            <button class="cta-button">Set up call</button>
+            <div class="menu-toggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+        </nav>
+        <script src="nav.js"></script>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <h1>Narayan Bhusal</h1>
+                <h2>Graphics Designer & Frontend Web Developer</h2>
+                <p>Crafting beautiful designs and seamless user experiences</p>
+            </div>
+            <div class="animated-bg">
+                <div class="shape shape1"></div>
+                <div class="shape shape2"></div>
+                <div class="shape shape3"></div>
+            </div>
+            <div class="featured-skills">
+                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                <div class="skill-icon"><i class="fab fa-figma"></i></div>
+                <div class="skill-icon"><i class="fab fa-canva"></i></div>
+            </div>
+        </section>
+        <section class="about">
+            <h1 class="title">About Me</h1>
+            <div class="container">
+                <div class="content">
+                    <p class="intro">
+                        Hello! I'm <span class="name">Narayan Bhusal</span>, a passionate graphics 
+                        designer with a keen eye for detail and a love for creating visually stunning experiences.
+                    </p>
+                    <p class="experience">
+                        With about 2.5 years of experience in the industry, I specialize in:
+                    </p>
+                    <ul class="skills-list">
+                        <li>Brand Identity Design</li>
+                        <li>UI/UX Design</li>
+                        <li>Graphics Design</li>
+                        <li>Frontend Web Development</li>
+                    </ul>
+                    <p class="goal">
+                        My goal is to bring your ideas to life through captivating visuals 
+                        that leave a lasting impression.
+                    </p>
+                </div>
+                <div class="image-section">
+                    <div class="profile-container">
+                        <div class="circle circle-1"></div>
+                        <div class="circle circle-2"></div>
+                        <div class="circle circle-3"></div>
+                        <img src="Images/profile-pic(4).png" alt="Profile" class="profile-image">
+                    </div>
+                </div>
+            </div>
+            </section>
+
+
+            <!--Skills Section-->
+            <h1 class="title">My Skills</h1>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <svg class="skill-icon" viewBox="0 0 24 24">
+                        <path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"/>
+                    </svg>
+                    <h2 class="skill-title">Graphics Designing</h2>
+                </div>
+        
+                <div class="skill-card">
+                    <svg class="skill-icon" viewBox="0 0 24 24">
+                        <path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z"/>
+                    </svg>
+                    <h2 class="skill-title">Basic Video Editing</h2>
+                </div>
+        
+                <div class="skill-card">
+                    <svg class="skill-icon" viewBox="0 0 24 24">
+                        <path d="M17,7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7M7,15A3,3 0 0,1 4,12A3,3 0 0,1 7,9H17A3,3 0 0,1 20,12A3,3 0 0,1 17,15H7Z"/>
+                    </svg>
+                    <h2 class="skill-title">Frontend Web<br>Development</h2>
+                </div>
+        
+                <div class="skill-card">
+                    <svg class="skill-icon" viewBox="0 0 24 24">
+                        <path d="M20.71,7.04C20.37,7.38 20.04,7.71 20.03,8.04C20,8.36 20.34,8.69 20.66,9C21.14,9.5 21.61,9.95 21.61,10.44C21.61,10.93 21.11,11.23 20.59,11.54C20.08,11.85 19.96,12.18 19.97,12.5C19.96,12.82 20.08,13.15 20.59,13.46C21.11,13.77 21.61,14.07 21.61,14.56C21.61,15.05 21.14,15.5 20.66,16C20.34,16.31 20,16.64 20.03,16.96C20.04,17.29 20.37,17.62 20.71,17.96C21.04,18.29 21.37,18.62 21.37,18.96C21.37,19.3 21.04,19.63 20.71,19.96C20.37,20.29 20.04,20.62 19.7,20.62C19.36,20.62 19.03,20.29 18.7,19.96C18.36,19.63 18.03,19.3 17.7,19.3C17.37,19.3 17.04,19.63 16.7,19.96C16.37,20.29 16.04,20.62 15.7,20.62C15.36,20.62 15.03,20.29 14.7,19.96C14.36,19.63 14.03,19.3 14.03,18.96C14.03,18.62 14.36,18.29 14.7,17.96C15.03,17.62 15.36,17.29 15.37,16.96C15.4,16.64 15.06,16.31 14.74,16C14.26,15.5 13.79,15.05 13.79,14.56C13.79,14.07 14.29,13.77 14.81,13.46C15.32,13.15 15.44,12.82 15.43,12.5C15.44,12.18 15.32,11.85 14.81,11.54C14.29,11.23 13.79,10.93 13.79,10.44C13.79,9.95 14.26,9.5 14.74,9C15.06,8.69 15.4,8.36 15.37,8.04C15.36,7.71 15.03,7.38 14.7,7.04C14.36,6.71 14.03,6.38 14.03,6.04C14.03,5.7 14.36,5.37 14.7,5.04C15.03,4.71 15.36,4.38 15.7,4.38C16.04,4.38 16.37,4.71 16.7,5.04C17.04,5.37 17.37,5.7 17.7,5.7C18.03,5.7 18.36,5.37 18.7,5.04C19.03,4.71 19.36,4.38 19.7,4.38C20.04,4.38 20.37,4.71 20.71,5.04C21.04,5.37 21.37,5.7 21.37,6.04C21.37,6.38 21.04,6.71 20.71,7.04Z"/>
+                    </svg>
+                    <h2 class="skill-title">UI/UX Design</h2>
+                </div>
+            </div>
+            <script src="skills.js"></script>
+            
+            <!--Skills Section-->
+        
+        
+
+<!--Start Qualifictaion Section-->
+<section id="qualifications">
+    <h2>My Qualifications/Achievements</h2>
+    <div class="timeline">
+        <div class="timeline-item" data-year="2024">
+            <div class="timeline-content">
+                <h3>Grade-10 passed in Computer Engineering</h3>
+                <p>Kalika Manavgyan Secondary School</p>
+                <p>Specialized in technical subjects like web development and language learning.</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-year="2026">
+            <div class="timeline-content">
+                <h3>Grade 11 running</h3>
+                <p>Kalika Manavgyan Secondary School</p>
+                <p>Currently studying for bettter grades</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-year="2023">
+            <div class="timeline-content">
+                <h3>Organizing Programs Since</h3>
+                <p>About technical skills and tools </p>
+                <p>Worked on Organizing Programs for social good</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="qualification.js"></script>
+<!--End Qualification Section-->
+
+
+
+
+
+            <section id="portfolio">
+            <div class="container">
+                <h2>My Portfolio</h2>
+                <div class="project-grid">
+                    <div class="project-card" data-project="project1">
+                        <img src="https://placeholder.com/300x200" alt="Project 1">
+                        <h3>E-commerce Website Redesign</h3>
+                    </div>
+                    <div class="project-card" data-project="project2">
+                        <img src="https://placeholder.com/300x200" alt="Project 2">
+                        <h3>Mobile App UI Design</h3>
+                    </div>
+                    <div class="project-card" data-project="project3">
+                        <img src="https://placeholder.com/300x200" alt="Project 3">
+                        <h3>Corporate Branding Package</h3>
+                    </div>
+                    <div class="project-card" data-project="project4">
+                        <img src="https://placeholder.com/300x200" alt="Project 4">
+                        <h3>Interactive Data Visualization</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="about.js"></script>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>jane.doe@example.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (123) 456-7890</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Jane Doe. All rights reserved.</p>
+    </footer>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="Project Image">
+            <p id="modal-description"></p>
+            <div id="modal-tech"></div>
+            <div class="modal-buttons">
+                <a id="modal-live" href="#" target="_blank" class="btn">See Live</a>
+                <a id="modal-code" href="#" target="_blank" class="btn">View Code</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

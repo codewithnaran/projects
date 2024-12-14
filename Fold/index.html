@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo">
+                <img src="/placeholder.svg?height=50&width=50" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="cta-button">Book a Call</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm a passionate developer creating amazing web experiences.</p>
+            <div class="scroll-indicator"></div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="profile-image">
+                <img src="/placeholder.svg?height=300&width=300" alt="Profile Picture">
+            </div>
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>I'm a web developer with a passion for creating beautiful and functional websites. With years of experience in various technologies, I bring ideas to life through code.</p>
+                <ul class="skills-list">
+                    <li>Web Development</li>
+                    <li>UI/UX Design</li>
+                    <li>Mobile App Development</li>
+                    <li>Database Management</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="/placeholder.svg?height=50&width=50" alt="Web Development">
+                    <h3>Web Development</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img src="/placeholder.svg?height=50&width=50" alt="UI/UX Design">
+                    <h3>UI/UX Design</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img src="/placeholder.svg?height=50&width=50" alt="Mobile Development">
+                    <h3>Mobile Development</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <img src="/placeholder.svg?height=50&width=50" alt="Database Management">
+                    <h3>Database Management</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="project-grid">
+                <div class="project-item" data-category="web">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Project 1</h3>
+                        <p>A web application for task management.</p>
+                    </div>
+                </div>
+                <div class="project-item" data-category="mobile">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Project 2</h3>
+                        <p>A mobile app for fitness tracking.</p>
+                    </div>
+                </div>
+                <div class="project-item" data-category="design">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Project 3">
+                    <div class="project-info">
+                        <h3>Project 3</h3>
+                        <p>UI/UX design for an e-commerce platform.</p>
+                    </div>
+                </div>
+            </div>
+            <button id="see-more" class="see-more-btn">See More</button>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>What Clients Say</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial-item">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Client 1">
+                    <blockquote>"Working with this developer was a great experience. They delivered high-quality work on time."</blockquote>
+                    <p class="client-info">John Doe, CEO of TechCorp</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Client 2">
+                    <blockquote>"Exceptional skills and great communication throughout the project."</blockquote>
+                    <p class="client-info">Jane Smith, Founder of DesignHub</p>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button id="prev-testimonial">&lt;</button>
+                <button id="next-testimonial">&gt;</button>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Get in Touch</h2>
+            <div class="contact-container">
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Email: your.email@example.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                    <p>Location: City, Country</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">Dribbble</a>
+                        <a href="#" target="_blank">Behance</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="quick-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" target="_blank"><img src="/placeholder.svg?height=24&width=24" alt="GitHub"></a>
+                <a href="#" target="_blank"><img src="/placeholder.svg?height=24&width=24" alt="LinkedIn"></a>
+                <a href="#" target="_blank"><img src="/placeholder.svg?height=24&width=24" alt="Dribbble"></a>
+                <a href="#" target="_blank"><img src="/placeholder.svg?height=24&width=24" alt="Behance"></a>
+            </div>
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
